@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ loadedstudent.enrollment }}</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+<ion-row>
+  <ion-col>
+   <ion-list>
+     <ion-item *ngFor='let student of loadedstudent.marks'>
+       <ion-label >
+          {{ student }}
+       </ion-label>
+     </ion-item>
+   </ion-list>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
